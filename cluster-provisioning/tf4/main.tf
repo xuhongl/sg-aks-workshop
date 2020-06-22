@@ -1,5 +1,5 @@
 resource "azurerm_storage_account" "storage" {
-  name                     = "${var.prefix}logs"
+  name                     = "${var.prefix}logsxuhliu"
   resource_group_name      = var.resource_group
   location                 = var.location
   account_tier             = "Standard"
@@ -16,7 +16,7 @@ resource "azurerm_storage_account" "storage" {
 #}
 
 resource "azurerm_container_registry" "acr" {
-  name                = "${var.prefix}acr"
+  name                = "${var.prefix}acrxuhliu"
   resource_group_name = var.resource_group
   location            = var.location
   sku                 = "Standard"
@@ -59,7 +59,8 @@ resource "azurerm_kubernetes_cluster" "demo" {
 
   default_node_pool {
     name            = "default"
-    node_count      = var.agent_count
+    #node_count      = var.agent_count
+    node_count      = 1
     vm_size         = var.vm_size
     os_disk_size_gb = var.os_disk_size_gb
     type            = "VirtualMachineScaleSets"
