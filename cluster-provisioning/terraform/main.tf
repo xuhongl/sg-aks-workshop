@@ -82,7 +82,7 @@ resource "azurerm_kubernetes_cluster" "demo" {
       #server_app_secret = var.aad_server_app_secret
       #tenant_id         = var.aad_tenant_id
       managed = true
-      admin_group_object_ids = "52f7c4f8-74cf-49a4-8f2e-1cca38bb4ef3"
+      admin_group_object_ids = ["52f7c4f8-74cf-49a4-8f2e-1cca38bb4ef3"]
       tenant_id = "72f988bf-86f1-41af-91ab-2d7cd011db47"
     }
   }
