@@ -24,7 +24,7 @@ resource "azurerm_container_registry" "acr" {
 }
 
 resource "azurerm_log_analytics_workspace" "demo" {
-  name                = "${var.prefix}-aks-logs"
+  name                = "${var.prefix}-aks-logsxuhliu"
   location            = var.location
   resource_group_name = var.resource_group
   sku                 = "PerGB2018"
